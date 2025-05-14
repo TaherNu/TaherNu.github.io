@@ -1,0 +1,366 @@
+/*font styles*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Inter:wght@400;500&display=swap');
+/*This resets the margins and padding and adds box sizing to all the elements*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*Setting the background color for the page and font family, as well as preventing horizontal scroll
+and adding top padding for the navigation bar*/
+html, body {
+    background-color: #F8F7F9;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+}
+/*Giving the images, and video a specific width, and height to match the width, so that all the images and videos are responsive*/
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+h1, h2{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+p{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.6; 
+}
+
+/*This is the styling for the navigation bar to the top of the page*/
+nav {
+    background-color: #000000;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.055);/*a soft shadow*/
+    position: fixed;  /* keeping the navigation bar in its place when scrolling*/
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;/*this makes sure the navigation bar is above all the other content in the page*/
+    padding: 20px 0;
+}
+
+/*Styling the navigation bar list*/
+nav ul {
+  list-style: none; /*removing the bullet points from the list*/
+  display: flex; 
+  justify-content: center; /*centering the content*/
+  align-items: center;
+  flex-wrap: wrap; /*this allows the items to wrap*/
+}
+/*adding spaces between the navigation list items*/
+nav ul li {
+    margin: 0 1rem;
+}
+
+/*styling the navigation bar links*/
+nav ul li a {
+  text-decoration: none; /*removing the links underline*/
+  color: #fff; /*text color*/
+  font-weight: 500; 
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+/*adding hover effects to the links*/
+nav ul li a:hover {
+  text-decoration: underline; /*this adds a underline to the text when its hovered*/
+  color: #ff0000; /*text color changes*/
+  transform: translateY(-2px); /*this moves the link up slightly*/
+}
+
+/*this changes the color of the link when its pressed*/
+nav ul li a:active {
+  color: #D100D1;
+}
+/*Styling for the position of the heading on the navigation bar*/
+.heading-div h1 {
+  cursor: pointer;
+  font-size: 32px;
+  color: #fff;
+  position: fixed;
+  top: 15px; 
+  left: 50px; 
+  z-index: 1001; 
+  
+}
+/*styling for the reviews container*/
+#reviews{
+    display: flex;
+    justify-content: center; /*center content*/
+    align-items: center;
+    flex-direction: column; /*arrange items in a vertical way*/
+    width: 100%;
+}
+/*styling for the reviews heading container */
+.reviews-heading {
+    letter-spacing: 1px; /*spacing between letters*/
+    margin: 30px 0px;
+    padding: 10px 20px; /*padding to add space between elements*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*center content*/
+    align-items: center;
+}
+/*styling for the heading inside the reviews heading container*/
+.reviews-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 700; /*bold*/
+}
+/*styling for the subheading inside the reviews heading container*/
+.reviews-heading h2 {
+    padding-right: 10rem; /*padding to add space between elements*/
+    font-size: 1.5rem;
+    text-align: center; /*center text align*/
+}
+/*styling for the avg rating contianer*/
+.avg-rating{
+    padding-top: 3rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column; /*arranges items in a vertical layout*/
+    justify-content: center; /*center content*/
+}
+/*styling for the rating container*/
+.rating{
+    align-items: center; /*center items*/
+    color: #f9d71f;
+    padding-top: 0.5rem;
+    margin-left: 5%;
+}
+
+/*styling for the reviews container*/
+.reviews-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap; /*wrap items */
+    width: 100%;
+    padding-bottom: 8%;
+}
+/*styling for the review-1 container*/
+.review-1 {
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1); /*adds a slight dark color shadow*/
+    background-color: white; /*white background color*/
+    padding: 20px; /*padding between elements*/
+    border-radius:15px; /*rounded edges*/
+    margin: 15px;
+    cursor: pointer; /*changes the cursor into a pointer when hovered*/
+}
+/*styling for the profile image container*/
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /*rounded edges*/
+    overflow: hidden; /*stops the items from overflowing outside their contianer*/
+    margin-right: 10px;
+}
+/*stylinf for the images inside the profile image containter*/
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*makes the image cover the whole area of the contianer*/
+    object-position: center; /*center image*/
+}
+/*styling for the profile container*/
+.profile{
+    display: flex; /*flex display to arrange items next to each other*/
+    align-items: center; /*center items*/
+}
+/*styling for the username contianer*/
+.user-name {
+    display: flex;
+    flex-direction: column; /*arrange items in a vertical layout*/
+}
+/*styling for the strong element inside the username container*/
+.user-name strong {
+    color: #3d3d3d; /*dark color*/
+    font-size: 1.1rem; 
+    letter-spacing: 0.5px; /*adds spacing between letters*/
+}
+/*styling for the span element inside the user name container*/
+.user-name span {
+    color: #979797; /*greyish color*/
+    font-size: 0.8rem;
+}
+/*color for the comment container items*/
+.comment {
+    color: #f9d71f;
+}
+/*styling for the review top container*/
+.review-top{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /*center content*/
+    margin-bottom: 20px;
+}
+/*styling for all the paragraphs inside in the comments container*/
+.comments p{
+font-size: 0.9rem;
+color: #4b4b4b;
+}
+/*hover effect for the review-1 container*/
+.review-1:hover {
+    box-shadow: 0 0 15px #000000; /*give a dark shdaow*/
+    transform: translateY(-10px); /*move item slightly upwards*/
+    transition: all ease 0.3s;
+}
+
+/*=====================================
+RESPONSIVENESS ON SMALLER SCREEN SIZES
+=======================================*/
+@media(max-width:1060px) {
+    .reviews-container{
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media(max-width:790px) {
+    .reviews-container{
+        width: 100%;
+    }
+    .reviews-heading h1{
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:340px) {
+    .review-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .comment{
+        margin-top: 10px;
+    }
+}
+
+::selection{
+    color: white;
+    background: #252525;
+}
+
+/*styling for the footer*/
+footer{
+    background-color: #111;
+}
+/*styling for the footer contaienr*/
+.footer_container{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 70px 30px 20px;
+
+
+}
+/*Styling for the social icons to make them next to eacj other and centered*/
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+/*this is the styling for each icon link*/
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+/*This is the styling for the icon*/
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+/*The hover effects for the icon*/
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+/*color changes when hovered*/
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+/*footer nav spacing*/
+.footer-nav{
+    margin: 30px 0;
+}
+/*footer nav layout*/
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+/*Footer links*/
+.footer-nav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+/*Hover effects for footer links*/
+.footer-nav ul li a:hover {
+    opacity: 1;
+}
+/*Footer bottom area for the copyright*/
+.footer-bottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+/*stytling for the bottom area paragraph*/
+.footer-bottom p {
+    color: white;
+}
+/*this is the styling for the designer credit area*/
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/*=====================================
+RESPONSIVENESS ON SMALLER SCREEN SIZES
+=======================================*/
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+        background-color: #000000;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .heading-div h1 {
+        font-size: 24p;
+        left: 20px;
+        top: 10px;
+    }
+    .footer-nav {
+        flex-direction: column;
+    }
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons {
+        margin-top: 0%;
+    }
+}

@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Inter:wght@400;500&display=swap');
+
+/*This resets the margins and padding and adds box sizing to all the elements*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*Setting the background color for the page and font family, as well as preventing horizontal scroll
+and adding top padding for the navigation bar*/
+html, body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+}
+/*Giving the images, and video a specific width, and height to match the width, so that all the images and videos are responsive*/
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/*applying font family and making text look pretty*/
+h1, h2{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+/*applying font family and making text look pretty*/
+body, p, .P3-P, .P4-p, .P5-p {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.6; /* Better readability */
+}
+/*This is the styling for the navigation bar to the top of the page*/
+nav {
+  background-color: #000000; /*background color*/
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.055);/*a soft shadow*/
+  position: fixed; /* keeping the navigation bar in its place when scrolling*/
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; /*this makes sure the navigation bar is above all the other content in the page*/
+  padding: 20px 0;
+}
+
+/*Styling the navigation bar list*/
+nav ul {
+  list-style: none; /*removing the bullet points from the list*/
+  display: flex; 
+  justify-content: center; /*centering the content*/
+  align-items: center;
+  flex-wrap: wrap; /*this allows the items to wrap*/
+}
+/*adding spaces between the navigation list items*/
+nav ul li {
+  margin: 0 1rem;
+}
+
+/*styling the navigation bar links*/
+nav ul li a {
+  text-decoration: none; /*removing the links underline*/
+  color: #fff; /*text color*/
+  font-weight: 500; 
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+/*adding hover effects to the links*/
+nav ul li a:hover {
+  text-decoration: underline; /*this adds a underline to the text when its hovered*/
+  color: #ff0000; /*text color changes*/
+  transform: translateY(-2px); /*this moves the link up slightly*/
+}
+
+/*this changes the color of the link when its pressed*/
+nav ul li a:active {
+  color: #D100D1;
+}
+/*Styling for the position of the heading on the navigation bar*/
+.heading-div h1 {
+  cursor: pointer;
+  font-size: 32px;
+  color: #fff;
+  position: fixed;
+  top: 15px; 
+  left: 50px; 
+  z-index: 1001; 
+  
+}
+
+
+
+  /*container for the agents section*/
+  .Agents-container {
+    background-color: rgb(255, 255, 255); 
+    padding: 0px;
+    overflow: hidden;
+  }
+  /*this is the slider setup which has custom variables*/
+  .slider {
+    width: 100%;
+    margin-bottom: 100px;
+    --item-width: 300px; /*this is the custom variable for the item width*/
+    --gap: 10px; /*this is for the gap between items*/
+    --duration: 25s; /*this is for the scrolling animation speed*/
+  }
+
+/*the styling for the heading*/
+  h1 {
+    text-align: center; /*center alignment*/
+    font-size: 100px; /*font size*/
+    padding-bottom: 2rem; /*bottom padding to add space between elemets*/
+  }
+  /*styling of the Heading for the slider*/
+  .slider h2 {
+    text-align: center; /*center alignment text*/
+    font-size: 44px; 
+    margin-bottom: 1rem; /*adding bottom margin for space between text*/
+    color: #000000; /*black color*/
+  }
+ /*styling for the description*/
+  .description {
+    text-align: center;/*center align*/ 
+    font-size: 25px; 
+    font-weight: 20px;
+    padding-bottom: 1rem;
+  }
+  /*styling for the images inside the list*/
+  .list img {
+    width: 20rem; /*specific width*/
+    height: 20rem; /*specific height*/
+    object-fit: cover; /*makes the image fully cover the container*/
+    border-radius: 10px; /*rounded edges*/
+    cursor: pointer; /*changes the cursor into a pointer*/
+
+  }
+/*hover effects for the list*/
+  .list:hover {
+    transform: scale(1.15); /*makes the list slightly bigger*/
+    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.5); /*adds a shadow to the list when hovered*/
+  }
+  
+  /*styling for the list*/
+  .list {
+    flex: 0 0 var(--item-width); /*this prevents the flex growth or shrinkage*/
+    background-color: #003049;  /*dark backround color*/
+    padding: 10px; /**/
+    border-radius: 10px;
+  }
+/*styling for the container that scrolls horizontally using the animation*/
+  .track {
+    height: 34rem;
+    display: flex;
+    gap: var(--gap);
+    animation: scrollLeft var(--duration) linear infinite;
+  }
+  /*This is the scrolling animation keyframes*/
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1 * (var(--item-width) + var(--gap)) *var(--total-items)));
+    }
+  }
+  
+  /* Pauses the scrolling when hovered */
+  .slider:hover .track {
+    animation-play-state: paused;
+  }
+  /*styling for the paragraph inside the list*/
+  .list p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  /*styling for the heading inside the list*/
+  .list h4 {
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: -4%;
+  }
+/*styling for the footer*/
+footer{
+    background-color: #111;
+}
+/*styling for the footer contaienr*/
+.footer_container{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 70px 30px 20px;
+
+
+}
+/*styling for the social icons to make them next to each other and centered*/
+.socialIcons-Agents{
+    display: flex;
+    justify-content: center;
+}
+/*This is the styling for each icon link*/
+.socialIcons-Agents a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%; /*this is used to make the links have a circular button*/
+}
+/*This is the styling for the icon*/
+.socialIcons-Agents a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+/*The hover effects for the icon*/
+.socialIcons-Agents a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+/*color changes on hover */
+.socialIcons-Agents a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+/*footer nav spacing*/
+.footer-nav{
+    margin: 30px 0;
+}
+/*Footer nav layout*/
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+/*Footer links*/
+.footer-nav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+/*Hover effect for footer links*/
+.footer-nav ul li a:hover {
+    opacity: 1;
+}
+/*Footer bottom area for the copyright*/
+.footer-bottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+/*styling for the bottom area paragraph*/
+.footer-bottom p {
+    color: white;
+}
+/*this is the styling for the designer credit area*/
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+/*=====================================
+RESPONSIVENESS ON SMALLER SCREEN SIZES
+=======================================*/
+@media (max-width: 700px) {
+    .footer-nav {
+        flex-direction: column;
+    }
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    nav ul {
+      flex-direction: column;
+      padding: 1rem 0;
+      background-color: #000000;
+  }
+
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+
+  .heading-div h1 {
+      font-size: 24p;
+      left: 20px;
+      top: 10px;
+  }
+  .footer-nav {
+      flex-direction: column;
+  }
+  .footer-nav ul li {
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .socialIcons {
+      margin-top: 440%;
+  }
+  .heading-div h1 {
+    margin-top: 0%;
+    font-size: 1.5rem;
+  }
+  h1{
+    margin-top: 30%;
+  }
+  #slider{
+    width: 100%;
+    margin: 1rem 0;
+    margin-bottom: -50%;
+}
+
+.list {
+  height: 32rem;
+}
+}

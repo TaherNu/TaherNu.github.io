@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Inter:wght@400;500&display=swap');
+
+/*This resets the margins and padding and adds box sizing to all the elements*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*Setting the background color for the page and font family, as well as preventing horizontal scroll
+and adding top padding for the navigation bar*/
+html, body {
+    background-color: #F8F7F9;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+}
+/*Giving the images, and video a specific width, and height to match the width, so that all the images and videos are responsive*/
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, .P4-h2, .P5-h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+
+body, p, .P3-P, .P4-p, .P5-p {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.6; /* Better readability */
+}
+
+/*This is the styling for the navigation bar to the top of the page*/
+nav {
+    background-color: #000000;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.055);/*a soft shadow*/
+    position: fixed; /*keeps the mav bar in place when scrolling*/
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; /*this makes sure the navigation bar is above all the other content in the page*/
+    padding: 20px 0;
+}
+
+/*Styling the navigation bar list*/
+nav ul {
+  list-style: none; /*removing the bullet points from the list*/
+  display: flex; 
+  justify-content: center; /*centering the content*/
+  align-items: center;
+  flex-wrap: wrap; /*this allows the items to wrap*/
+}
+/*adding spaces between the navigation list items*/
+nav ul li {
+    margin: 0 1rem;
+}
+
+/*styling the navigation bar links*/
+nav ul li a {
+  text-decoration: none; /*removing the links underline*/
+  color: #fff; /*text color*/
+  font-weight: 500; 
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+/*adding hover effects to the links*/
+nav ul li a:hover {
+  text-decoration: underline; /*this adds a underline to the text when its hovered*/
+  color: #ff0000; /*text color changes*/
+  transform: translateY(-2px); /*this moves the link up slightly*/
+}
+
+/*this changes the color of the link when its pressed*/
+nav ul li a:active {
+  color: #D100D1;
+}
+/*Styling for the position of the heading on the navigation bar*/
+.heading-div h1 {
+  cursor: pointer;
+  font-size: 32px;
+  color: #fff;
+  position: fixed;
+  top: 8px; 
+  left: 50px; 
+  z-index: 1001; 
+  
+}
+
+/*styling for the P1 container*/
+.P1_Container {
+    background-color: #F8F7F9; /*background color*/ 
+    padding: 2rem 1rem; /*padding to add space between elements*/
+    overflow: hidden; /*stop items from overflowing*/
+    height: 100%;
+  }
+
+  /*styling for the image container*/
+.img_container {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+/*styling for the images inside the image container*/
+.img_container img {
+    margin-left: -2%;
+    width: 100vw;
+    height: auto;
+}
+/*styling for the main heading*/
+.text h1 {
+    padding-top: 40%;
+    padding-left: 3%;
+    font-weight: bold; /*bold*/
+    font-size: 7rem; 
+    text-align: left; /*center text alignment*/
+    color: #ffffff; /*red text color*/
+}
+/*subheading styling*/
+h2 {
+    font-weight: 10;
+    padding-left: 3%;
+    font-size: 1.8rem; 
+    text-align: left; /*center text alignment*/
+    padding-bottom: 3rem;
+}
+/*subheading styling*/
+h3 {
+    padding-top: 10%;
+    text-align: center;
+    margin-left: 2rem;
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+/*subheading styling*/
+h4 {
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+}
+/*styling for the pragraphs*/
+p{
+    color: white; /*white color*/
+    padding-top: 0.5rem;
+} 
+/*styling for the underlined items*/
+u {
+    cursor: pointer;
+}
+
+/*This is the slider setup which has custom variables*/
+  .slider {
+    padding-top: 3%;
+    padding-bottom: 0%;
+    width: 100%;
+    --item-width: 300px; /*this is the custom variable for the item width*/
+    --gap: 10px; /*this is for the gap between items*/
+    --total-items: 7; /*this is for the speed of the animation*/
+    --duration: 25s; /*this is for the duration of the animation*/
+  }
+ /*styling for the images inside the list*/
+  .list img {
+    width: 20rem; /*fixed width*/
+    height: 12rem; /*fixed height*/
+    object-fit: cover; /*makes the image fully cover the container*/
+    border-radius: 10px; /*rounded edges*/
+  }
+    /*hover effects for the list*/
+  .list:hover {
+    transform: scale(1.25); /*makes the list slightly bigger*/
+    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.5); /*adds a redish shadow color*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /*styling for the list*/
+  .list {
+    flex: 0 0 var(--item-width); /*this prevents the flex growth or shrinkage*/
+    background-color: #EF233C; /* red background color*/
+    padding: 10px; /*padding between elements*/
+    border-radius: 10px; /*rounded edges*/
+  }
+  /*styling for the contaienr that scrolls horizontally using the animation*/
+  .track {
+    height: auto;
+    min-height: 24.6rem;
+    display: flex;
+    gap: 1rem;
+    animation: scrollLeft var(--duration) linear infinite;
+    margin-bottom: 0%;
+    padding-bottom: 3rem;
+  }
+  /*this is the scrolling animation keyframes*/
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1 * (var(--item-width) + var(--gap)) * var(--total-items)));
+    }
+  }
+  
+  /*Pauses the scrolling when hovered*/
+  .slider:hover .track {
+    animation-play-state: paused;
+  }
+
+
+  /*styling for the P2 container*/
+  .P2_Container {
+    position: absolute;
+    background-color: #F8F7F9;
+    color: white;
+    padding: 10px 20px;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+/*styling for the heading inside the p2 container*/
+.p2-h2 {
+    font-weight: bold;
+    font-size: 45px;
+    text-align: left; /*left text align*/
+    padding-top: 15%;
+    margin-left: 5%;
+    margin-top: 100px;
+}
+/*styling for the subheading inside the p2 container*/
+.p2-h4 {
+    margin-top: -2%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+/*styling for the p2 button*/
+.p2-button {
+    margin-top: 2%;
+    padding: 5px;
+    font-size: 20px;
+    background-color: red;
+    border-radius: 5px;
+    border:none;
+    margin-left: 5%;
+    cursor: pointer;
+}
+/*hover effects on the button*/
+.p2-button:hover {
+    background-color: aquamarine;
+    transform: scale(1.10); /*makes it a little bit bigger*/
+}
+/*styling for the text container*/
+.text {
+    width: 45%;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/*styling for the p3-h4 subheading*/
+.P3-h4 {
+    color: black;
+    padding-top: 55px;
+    text-align: center;
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+ /*styling for the p3-p paragraph*/
+.P3-P {
+    padding-top: 20px;
+    text-align: center;
+    color: black;
+    margin-left: 11%;
+    width: 78%;
+    font-size: 20px;
+}
+/*styling for the p3-vid video*/
+.P3-vid {
+    border-radius: 50px;
+    padding: 20px;
+    width: 100vw;
+    height: auto;
+}
+
+/*styling for the p4_img container*/
+.P4_img_container {
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+}
+/*styling for the image inside the p4_img container*/
+.P4_img_container img {
+    margin-top: 5%;
+    margin-left: -20px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20%;
+}
+/*styling for the p4-h2 heading*/
+.P4-h2 {
+    color: rgb(255, 255, 255);
+    padding-top: 5px;
+    font-size: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: -90%;
+}
+/*stylign for the p4-p paragraph*/
+.P4-p {
+    margin-left: 10rem;
+    margin-top: -12%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 75%;
+    font-size: 25px;
+    padding-bottom: 30%;
+}
+/*styling for the p4_button*/
+.P4_button {
+    margin-left: 41.2rem;
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    border:2 px solid transparent;
+    margin-top: 4%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: 2px solid white;
+    outline-offset: 1px;
+}
+/*hover effects for the p4_button*/
+.P4_button:hover {
+    background-color: #c30000;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(161, 127, 255, 0.3);
+    border-color: white;
+    color: white;
+}
+
+/*styling for the p5 container*/
+.P5_Container{
+    color: black;
+    width: 100vw;
+}
+/*styling for the p5 container heading*/
+.P5-h2{
+    text-align: center; 
+    font-size: 5rem;
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+    margin-top: 35%;
+    width: 100%;}
+/*styling for the p5 subheading*/
+.P5-h4 {
+    color: black;
+    text-align: center;
+    margin-top: -2%;
+    padding-bottom: 1%;
+    font-size: 30px;
+    width: 100%;
+}
+/*styling for the p5 paragraph*/
+.P5-p{ 
+    color: #000000;
+    text-align: center;
+    margin-top: -7%;
+    font-size: 20px;
+    width: 100%;
+    padding-bottom: 8%;
+}
+/*styling for the p5_button*/
+.P5_button {
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    border:2 px solid transparent;
+    margin-top:2%;
+    margin-left: 44%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: 2px solid white;
+    outline-offset: 1px; 
+}
+/*hover effects for the button*/
+.P5_button:hover {
+    background-color: #c30000;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(161, 127, 255, 0.3);
+    border-color: white;
+    color: white;
+}
+/*styling for the p5 image*/
+.P5-img {
+    margin-left: -2%;
+    width: 100vw;
+    padding-bottom: 0%;
+}
+
+/*styling for the footer*/
+footer{
+    background-color: #111;
+}
+/*styling for the footer container*/
+.footer_container{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 70px 30px 20px;
+
+
+}
+/*Styling for the social icons to make them next to eacj other and centered*/
+.socialIcons{
+    margin-top: 255%;
+    display: flex;
+    justify-content: center;
+}
+
+/*this is the styling for each icon link*/
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+/*This is the styling for the icon*/
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+/*The hover effects for the icon*/
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+/*color changes when hovered*/
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+/*footer nav spacing*/
+.footer-nav{
+    margin: 30px 0;
+}
+/*footer nav layout*/
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+/*Footer links*/
+.footer-nav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+/*Hover effects for footer links*/
+.footer-nav ul li a:hover {
+    opacity: 1;
+}
+/*Footer bottom area for the copyright*/
+.footer-bottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+/*stytling for the bottom area paragraph*/
+.footer-bottom p {
+    color: white;
+}
+/*this is the styling for the designer credit area*/
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/*=====================================
+RESPONSIVENESS ON SMALLER SCREEN SIZES
+=======================================*/
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+        background-color: #000000;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .heading-div h1 {
+        font-size: 24p;
+        left: 20px;
+        top: 10px;
+    }
+    .footer-nav {
+        flex-direction: column;
+    }
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons {
+        margin-top: 440%;
+    }
+    .P4-h2, .P4-p {
+        top: 15%;
+        left: 5%;
+    }
+    .page1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    #slider, .P1_Container {
+        width: 100%;
+        margin: 1rem 0;
+        margin-bottom: -50%;
+    }
+    .P1_Container h1 {
+        margin-top: 5rem;
+        font-size: 40px;
+        text-align: center;
+    }
+    .P1_Container h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .P1_Container h3 {
+        font-size: 20px;
+    }
+
+    .P1_Container 
+    nav ul {
+        flex-direction: column;
+    }
+    .heading-div h1 {
+        font-size: 24px;
+    }
+
+
+    .img_container img {
+        margin-left: -5%;
+    }
+
+    .p2-h2, .p2-h4 {
+        margin-top: 0%;
+        padding: 5%;
+        font-size: 20px;
+        z-index: 1;
+    }
+    .p2-button {
+        padding: 1%;
+    }
+    .P3-h4 {
+        font-size: 30px;
+    }
+    .P3-P {
+        margin-left: 0%;
+        width: 90%;
+    }
+
+    .P3-vid {
+        margin-left: -2%;
+    }
+
+    .P4-h2 {
+        font-size: 30px;
+    }
+    .P4_button {
+        padding: 1%;
+        font-size: 20px;
+        margin-top: 20%;
+    }
+    .P4-p {
+        font-size: 20px;
+        width: 80%;
+        margin-top: -30%;
+    }
+
+    .P5_button {
+        padding: 1%;
+        margin-top: 25%;
+        margin-left: 37%;
+    }
+
+    .P5-p {
+        margin-top: -30%;
+        padding-bottom: 20%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2, .p2-h2, .P3-h4, .P5-h2 {
+        font-size: 1.5rem;
+    }
+
+    .P5-h2 {
+        margin-left: -2%;
+    }
+    .P5-h4{
+        margin-left: -3%;
+        font-size: 30px;
+    }
+    .P5-p{
+        width: 90%;
+    }
+    .P5-img{
+        margin-left: -5%;
+    }
+    h3, h4 {
+        font-size: 1.2rem;
+    }
+
+    .p2-button, .P4_button, .P5_button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+}

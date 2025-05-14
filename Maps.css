@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Inter:wght@400;500&display=swap');
+/*This resets the margins and padding and adds box sizing to all the elements*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*Setting the background color for the page and font family, as well as preventing horizontal scroll
+and adding top padding for the navigation bar*/
+html, body {
+  font-family: 'Titillium web', sans-serif;
+    background-color: #F8F7F9;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+}
+h1, h2, h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+/*Giving the images, and video a specific width, and height to match the width, so that all the images and videos are responsive*/
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*This is the styling for the navigation bar to the top of the page*/
+nav {
+  background-color: #000000; /*background color*/
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.055);/*a soft shadow*/
+  position: fixed; /* keeping the navigation bar in its place when scrolling*/
+  top: 0;
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; /*this makes sure the navigation bar is above all the other content in the page*/
+  padding: 20px 0;
+}
+
+/*Styling the navigation bar list*/
+nav ul {
+  list-style: none; /*removing the bullet points from the list*/
+  display: flex; 
+  justify-content: center; /*centering the content*/
+  align-items: center;
+  flex-wrap: wrap; /*this allows the items to wrap*/
+}
+/*adding spaces between the navigation list items*/
+nav ul li {
+  margin: 0 1rem;
+}
+
+/*styling the navigation bar links*/
+nav ul li a {
+  font-family: 'Titillium web', sans-serif;
+  text-decoration: none; /*removing the links underline*/
+  color: #fff; /*text color*/
+  font-weight: 500; 
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+/*adding hover effects to the links*/
+nav ul li a:hover {
+  text-decoration: underline; /*this adds a underline to the text when its hovered*/
+  color: #ff0000; /*text color changes*/
+  transform: translateY(-2px); /*this moves the link up slightly*/
+}
+
+/*this changes the color of the link when its pressed*/
+nav ul li a:active {
+  color: #D100D1;
+}
+/*Styling for the position of the heading on the navigation bar*/
+.heading-div h1 {
+  cursor: pointer;
+  font-size: 32px;
+  color: #fff;
+  position: fixed;
+  top: 15px; 
+  left: 50px; 
+  z-index: 1001; 
+  
+}
+
+ /*styling for the heading inside the list container*/
+  .list h2 {
+    text-align: center;
+    font-weight: 20px;
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+    /*styling for the paragraph inside the list container*/
+  .list p {
+    margin-left: 16rem;
+    text-align: center;
+    font-size: 20px;
+    width: 70%;
+    padding-bottom: 1rem;
+  }
+  /*styling for the images inside the list contianer*/
+  .list img {
+    border-radius: 10px;
+    margin-left: 11%;
+    width: 1200px;
+    margin-bottom: 1%;
+  }
+    /*styling for the mini-map container*/
+.mini-map_container {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    padding-bottom: 4rem;
+}
+/*styling for the images inside the mini-map container*/
+.mini-map_container img {
+    width: 20rem;
+    border-radius: 10px;
+    z-index: 1;
+}
+/*styling for the image inside the Mini-map container*/
+.Mini-map_container img {
+    width: 20rem;
+    border-radius: 10px;
+    z-index: 1;
+    margin-bottom: 3%;
+}
+/*styling for the mini-map container*/
+.Mini-map_container {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+}
+
+/*styling for the footer*/
+footer{
+    background-color: #111;
+}
+/*styling for the footer contaienr*/
+.footer_container{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 70px 30px 20px;
+
+
+}
+/*Styling for the social icons to make them next to eacj other and centered*/
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+/*this is the styling for each icon link*/
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+/*This is the styling for the icon*/
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+/*The hover effects for the icon*/
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+/*color changes when hovered*/
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+/*footer nav spacing*/
+.footer-nav{
+    margin: 30px 0;
+}
+/*footer nav layout*/
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+/*Footer links*/
+.footer-nav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+/*Hover effects for footer links*/
+.footer-nav ul li a:hover {
+    opacity: 1;
+}
+/*Footer bottom area for the copyright*/
+.footer-bottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+/*stytling for the bottom area paragraph*/
+.footer-bottom p {
+    color: white;
+}
+/*this is the styling for the designer credit area*/
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    font-family: 'inter', sans-serif;
+}
+
+/*=====================================
+RESPONSIVENESS ON SMALLER SCREEN SIZES
+=======================================*/
+
+@media (max-width: 700px) {
+    .footer-nav {
+        flex-direction: column;
+    }
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    nav ul {
+      flex-direction: column;
+      padding: 1rem 0;
+      background-color: #000000;
+  }
+
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+
+  .heading-div h1 {
+      font-size: 24p;
+      left: 20px;
+      top: 10px;
+  }
+  .footer-nav {
+      flex-direction: column;
+  }
+  .footer-nav ul li {
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .heading-div h1 {
+    margin-top: 0%;
+    font-size: 1.5rem;
+  }
+
+  h2{
+    margin-top: 25%;
+  }
+  p {
+    margin-left: 8%;
+    padding-bottom: 5%;
+  }
+  .list img {
+    margin-left: 5%;
+    width: 90%;
+  }
+  .mini-map_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Mini-map_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

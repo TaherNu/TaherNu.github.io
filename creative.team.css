@@ -1,0 +1,367 @@
+/*importing family fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Rajdhani:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&family=Inter:wght@400;500&display=swap');
+
+/*This resets the margins and padding and adds box sizing to all the elements*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*Setting the background color for the page and font family, as well as preventing horizontal scroll
+and adding top padding for the navigation bar*/
+html, body {
+    background-color: #ffffff;
+    color: black;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    font-family:Arial, Helvetica, sans-serif
+}
+/*applying font family and making text look pretty*/
+h1, h2{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+/*applying font family and making text look pretty*/
+body, p{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.6; /* Better readability */
+}
+/*Giving the images, and video a specific width, and height to match the width, so that all the images and videos are responsive*/
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/*This is the styling for the navigation bar to the top of the page*/
+nav {
+    background-color: #000000;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.055);/*a soft shadow*/
+    position: fixed;  /* keeping the navigation bar in its place when scrolling*/
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;/*this makes sure the navigation bar is above all the other content in the page*/
+    padding: 20px 0;
+}
+
+/*Styling the navigation bar list*/
+nav ul {
+  list-style: none; /*removing the bullet points from the list*/
+  display: flex; 
+  justify-content: center; /*centering the content*/
+  align-items: center;
+  flex-wrap: wrap; /*this allows the items to wrap*/
+}
+/*adding spaces between the navigation list items*/
+nav ul li {
+    margin: 0 1rem;
+}
+
+/*styling the navigation bar links*/
+nav ul li a {
+  text-decoration: none; /*removing the links underline*/
+  color: #fff; /*text color*/
+  font-weight: 500; 
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+/*adding hover effects to the links*/
+nav ul li a:hover {
+  text-decoration: underline; /*this adds a underline to the text when its hovered*/
+  color: #ff0000; /*text color changes*/
+  transform: translateY(-2px); /*this moves the link up slightly*/
+}
+
+/*this changes the color of the link when its pressed*/
+nav ul li a:active {
+  color: #D100D1;
+}
+/*Styling for the position of the heading on the navigation bar*/
+.heading-div h1 {
+  cursor: pointer;
+  font-size: 32px;
+  color: #fff;
+  position: fixed;
+  top: 15px; 
+  left: 50px; 
+  z-index: 1001; 
+  
+}
+/*Container for layout alignment*/
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+/*contianer foe section titles*/
+.section-title{
+    width: 100%; 
+    padding: 0 15px; /*this is to add horizontal spacing*/
+    text-align: center;
+    margin-bottom: 60px; /*adds space below the title */
+}
+/*styling for the header inside the section container*/
+.section-title h2 {
+    font-size: 55px;
+    text-transform: capitalize;
+    font-weight: 700; 
+}
+/*styling for the span inside the heading*/
+.section-title h2 span {
+    color: var(--pink);
+}
+/*styling the container with a flex row*/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*main team section contianer*/
+.team {
+    background-color: var(--pink-light);
+    min-height: 100vh;
+    padding: 80px 0 ;
+}
+/*styling for all the images*/
+img{
+    border-radius: 20px;
+    max-width: 100%;
+    vertical-align: middle;
+    height: 25rem;
+}
+/*styling for the card for each team member*/ 
+.team-item {
+    border-radius: 20px;
+    width: calc((100% / 3) - 30px); /*this allows 3 items per row with proper spacing*/
+    margin: 0 15px 30px; /*adding horizontal and bottom margins*/
+    position: relative; 
+    transition: box-shadow 0.5s ease; /*this adds a smooth shadow when hovered*/
+}
+/*shadow hover effect around the team car*/
+.team-item:hover {
+        box-shadow: 0 0 15px #b7a6ce; }
+
+/*Styling for the iamge inside the card*/
+.team-item img {
+    width: calc(100% - 60px); /*This allows space for the social icons*/
+    position: relative;
+    z-index: 1; /*allows the image to be behind the name*/
+    transition: transform 0.5s ease; /*this allows for a smooth movement effect when hovered*/
+}
+/*this slides the image to the right when hovered*/
+.team-item:hover img {
+    transform: translate(60px);
+}
+/*This is for the team member's names inside the container*/
+.team-item h3 {
+    position: absolute;
+    background-color: #ffffff;
+    right: 0;
+    bottom: 15px;
+    padding: 4px;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    z-index: 2;
+    transition: right 0.5s ease;
+    margin-left: 75px;
+}
+/*hover effect for the names inside the container*/
+.team-item:hover h3 {
+    right: 15px;
+}
+/*styling for the roles*/
+.team-item h3 span {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #525252;
+}
+/*styling for the social icons contianer inside the team card*/
+.team-item .social-icons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+/*adding hover effects so that the social icons appear when hovered*/
+.team-item:hover .social-icons {
+    transform: translateX(0%);
+    opacity: 1;
+}
+/*Styling for each link inside the social icons contianer*/
+.team-item .social-icons a{
+    display: block;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    color: #777777;
+    border: 1px solid #777777;
+    border-radius: 50%;
+    margin: 3px 0;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+/*adding hover effects for when the links are hovered*/
+.team-item .social-icons a:hover {
+    color: #0A1045 ;
+    border-color: rgb(0, 0, 0);
+
+}
+
+/*styling for the footer*/
+footer{
+    background-color: #111;
+}
+/*styling for the footer contaienr*/
+.footer_container{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 70px 30px 20px;
+
+
+}
+/*Styling for the social icons to make them next to eacj other and centered*/
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+/*this is the styling for each icon link*/
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+/*This is the styling for the icon*/
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+/*The hover effects for the icon*/
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+/*color changes when hovered*/
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+/*footer nav spacing*/
+.footer-nav{
+    margin: 30px 0;
+}
+/*footer nav layout*/
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+/*Footer links*/
+.footer-nav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+/*Hover effects for footer links*/
+.footer-nav ul li a:hover {
+    opacity: 1;
+}
+/*Footer bottom area for the copyright*/
+.footer-bottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+/*stytling for the bottom area paragraph*/
+.footer-bottom p {
+    color: white;
+}
+/*this is the styling for the designer credit area*/
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/*=====================================
+RESPONSIVENESS ON SMALLER SCREEN SIZES
+=======================================*/
+@media (max-width: 700px) {
+    .footer-nav {
+        flex-direction: column;
+    }
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    nav ul {
+      flex-direction: column;
+      padding: 1rem 0;
+      background-color: #000000;
+  }
+
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+
+  .heading-div h1 {
+      font-size: 24p;
+      left: 20px;
+      top: 10px;
+  }
+  .footer-nav {
+      flex-direction: column;
+  }
+  .footer-nav ul li {
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .heading-div h1 {
+    margin-top: 0%;
+    font-size: 1.5rem;
+  }
+
+  h2{
+    margin-top: 25%;
+  }
+}
+
+@media(max-width: 991px) {
+    .team-item{
+        width: calc(50% - 30px);
+    }
+}
+
+@media(max-width: 575px) {
+    .team-item{
+        width: calc(0% - 30px);
+    }
+}
